@@ -1,0 +1,329 @@
+/* Общие стили */
+@font-face {
+    font-family: 'Rawline';
+    src: url('font/rawline-400.ttf') format('truetype'),
+         url('font/rawline-600.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rawline', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* Анимации */
+button:active {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.5s ease;
+}
+
+button:hover,
+.nav__icon:hover {
+    transform: translateY(2px);
+    transition:  transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Шапка */
+.header {
+    height: 85px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    max-width: calc(100% - 28px);
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__item {
+    margin-right: 670px;
+}
+
+.nav__item:has(.nav__link--icon) {
+    margin-right: 28px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.nav__button {
+    width: 90px;
+    height: 40px;
+}
+
+.nav__link {
+    color: rgba(255, 110, 31, 1);
+}
+
+.nav__item:has(.nav__burger-menu-button) {
+    display: none;
+}
+
+/* Контент */
+.main {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid black;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 174px;
+    padding-top: 313px;
+    min-width: 50%;
+}
+
+.text-content__title {
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.text-content__description {
+    font-size: 32px;
+    line-height: 52px;
+    margin-bottom: 30px;
+    max-width: 772px;
+}
+
+.text-content__button {
+    width: 258px;
+    height: 53px;
+    font-size: 24px;
+    line-height: 33px;
+}
+
+.main__image-container {
+    min-width: 50%;
+    padding: 54px 14px;
+    border-left: 1px solid black;
+}
+
+.main__image {
+    max-width: 100%;
+    height: 875px;
+    object-fit: cover;
+}
+
+/* Адаптивные стили */
+/* Экран 1400х1665 */
+@media screen and (max-width: 1400px) and (max-height: 1665px) {
+    button:active {
+        transform: translateY(1px);
+        transition: background-color 0.1s ease;
+
+    }
+
+    .nav__item {
+        margin-right: 570px;
+    }
+
+    .main {
+        flex-direction: column;
+        margin-bottom: 54px;
+    }
+
+    .text-content {
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 120px 0;
+        max-width: 900px;
+    }
+
+    .text-content__title {
+        max-width: 650px;
+    }
+
+    .text-content__description {
+        min-width: 900px;
+    }
+
+    .main__image-container {
+        max-width: 100%;
+        padding: 0 14px;
+        border: none;
+        padding-bottom: 54px;
+    }
+
+    .main__image {
+        max-width: 100%;
+        height: 875px;
+        object-fit: cover;
+    }
+}
+
+/* Экран 991х1537 */
+@media screen and (max-width: 991px) and (max-height: 1537px) {
+    .nav__list {
+        max-width: 100%;
+    }
+
+    .nav__item:has(.nav__link-home) {
+        display: none;
+    }
+
+    .nav__item {
+        margin-right: 28px;
+    }
+
+    .nav__item:has(.nav__burger-menu-button) {
+        display: flex;
+        margin-right: 402px;
+    }
+    
+    .nav__item:has(.nav__button) {
+        margin-right: 348px;
+    }
+
+    .nav__burger-menu-button {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        width: 35px;
+        height: 24px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .nav__burger-menu-button .line {
+        width: 100%;
+        height: 2px;
+        background-color: black;
+    }
+
+    .text-content {
+        padding: 80px 0;
+    }
+
+    .text-content__title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+    
+    .text-content__description {
+        max-width: 650px;
+        min-width: 0;
+        font-size: 24px;
+        line-height: 44px;
+    }
+    
+    .text-content__button {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
+
+/* Экран 767х1195 */
+@media screen and (max-width: 767px) and (max-height: 1195px) {
+    .main {
+        margin-bottom: 44px;
+    }
+    .header {
+        height: 50px;
+    }
+
+    .nav__item {
+        margin-right: 13px;
+    }
+
+    .nav__item:has(.nav__burger-menu-button) {
+        margin-right: 309px;
+    }
+
+    .nav__burger-menu-button {
+        width: 16px;
+        height: 10px;
+    }
+
+    .nav__burger-menu-button .line {
+        height: 1px;
+    }
+
+    .nav__button {
+        height: 30px;
+    }
+    
+    .nav__item:has(.nav__button) {
+        margin-right: 279px; 
+    }
+
+    .nav__icon {
+        width: 16px;
+        height: auto;
+    }
+
+    .text-content {
+        text-align: left;
+        padding: 54px 0;
+        margin: 0 14px;
+        align-items: start;
+    }
+
+    .text-content__title {
+        font-size: 40px;
+        line-height: 50px;
+        margin-bottom: 20px;
+    }
+
+    .text-content__description {
+        font-size: 20px;
+        line-height: 40px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .text-content__button {
+        width: 183px;
+        height: 40px;
+        line-height: 20px;
+    }
+
+    .main__image {
+        max-height: 671px;
+    }
+}
