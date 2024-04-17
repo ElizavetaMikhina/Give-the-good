@@ -9,27 +9,31 @@
 <body>
     <header class="header">
         <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <button class="nav__burger-menu-button" aria-label="Открыть меню">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
-                </li>
-                <li class="nav__item"><button class="nav__button">Lorem</button></li>
-                <li class="nav__item"><a href="#" class="nav__link nav__link-home">Home</a></li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link nav__link--icon">
-                        <img src="img/icons/email.svg" alt="Написать на почту" class="nav__icon">
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link nav__link--icon">
-                        <img src="img/icons/phone.svg" alt="Позвонить нам" class="nav__icon">
-                    </a>
-                </li>
-            </ul>
+            <div class="nav__list-container">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <button class="nav__burger-menu-button" aria-label="Открыть меню">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </button>
+                    </li>
+                    <li class="nav__item"><button class="nav__button">Lorem</button></li>
+                    <li class="nav__item"><a href="#" class="nav__link nav__link-home">Home</a></li>
+                    <div class="nav__item-container">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--icon">
+                                <img src="img/icons/email.svg" alt="Написать на почту" class="nav__icon">
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link nav__link--icon">
+                                <img src="img/icons/phone.svg" alt="Позвонить нам" class="nav__icon">
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
         </nav>
     </header>
     <main class="main">
