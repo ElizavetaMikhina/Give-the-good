@@ -154,7 +154,7 @@ button:hover,
 
 /* Адаптивные стили */
 /* Экран 1400х1665 */
-@media screen and (max-width: 1400px) and (max-height: 1665px) {
+@media screen and (max-width: 1400px) {
     button:active {
         transform: translateY(1px);
         transition: background-color 0.1s ease;
@@ -202,9 +202,13 @@ button:hover,
 }
 
 /* Экран 991х1537 */
-@media screen and (max-width: 991px) and (max-height: 1537px) {
+@media screen and (max-width: 991px) {
     .nav__list {
         max-width: 100%;
+    }
+
+    .nav__button {
+        margin-left: 30px;
     }
 
     .nav__item:has(.nav__link-home) {
@@ -256,7 +260,7 @@ button:hover,
 }
 
 /* Экран 767х1195 */
-@media screen and (max-width: 767px) and (max-height: 1195px) {
+@media screen and (max-width: 767px) {
     .main {
         margin-bottom: 44px;
     }
@@ -266,6 +270,10 @@ button:hover,
 
     .nav__item:last-child {
         margin-left: 13px;
+    }
+
+    .nav__button {
+        margin-left: 15px;
     }
 
     .nav__burger-menu-button {
